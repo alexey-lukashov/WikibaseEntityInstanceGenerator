@@ -1,0 +1,43 @@
+{
+        "name": "WikibaseEntityInstanceGenerator",
+        "version": "0.0.0",
+        "author": [
+                "Alexey Lukashov"
+        ],
+        "url": "https://github.com/alexey-lukashov/WikibaseEntityInstanceGenerator",
+        "descriptionmsg": "weig-desc",
+        "version": "1.0.0",
+        "license-name": "GPL-2.0-or-later",
+        "type": "wikibase",
+        "AutoloadNamespaces": {
+                "MediaWiki\\Extension\\WikibaseEntityInstanceGenerator\\": "includes/"
+        },
+        "SpecialPages": {
+                "WikibaseEntityInstanceGenerator": {
+                      "class":"MediaWiki\\Extension\\WikibaseEntityInstanceGenerator\\Special",
+                       "factory": "MediaWiki\\Extension\\WikibaseEntityInstanceGenerator\\Special::factory",
+                       "services": [
+                                "WikibaseRepo.EntityNamespaceLookup",
+                                "WikibaseRepo.EntityTitleLookup",
+                                "WikibaseRepo.ItemTermsCollisionDetector",
+                                "WikibaseRepo.Settings",
+                                "WikibaseRepo.TermValidatorFactory",
+                                "WikibaseRepo.EntityLookup"
+                        ]
+                  }
+        },
+        "MessagesDirs": {
+                "WikibaseEntityInstanceGenerator": [
+                        "i18n"
+                ]
+        },
+        "manifest_version": 2,
+        "requires": {
+                "MediaWiki": ">= 1.36.0",
+                "platform": {
+                        "php": ">= 5.6"
+                },
+                "extensions": {
+                }
+        }
+}

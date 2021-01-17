@@ -1,0 +1,9 @@
+{
+        "@metadata": {
+                "authors": [
+                        "Alexey Lukashov"
+                ]
+        },
+        "wikibaseentityinstancegenerator": "Wikibase Entity Instance Generator",
+        "weig-desc": "Adds the instance generation for items based on parent item and property specified."
+}
